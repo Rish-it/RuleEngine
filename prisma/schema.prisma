@@ -1,0 +1,15 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Rule {
+  id        Int      @id @default(autoincrement())
+  rule_name String   @unique // Ensures unique rule names
+  rule_ast  Json
+  createdAt DateTime @default(now()) // Track creation date
+}
