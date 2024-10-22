@@ -1,26 +1,12 @@
-// app/components/Header.tsx
 "use client";
 
-import { useEffect, useState } from 'react';
+import { LampContainer } from "./ui/lamp";
 
 const Header = () => {
-    const [isDarkMode, setIsDarkMode] = useState(false);
-
-    const toggleDarkMode = () => {
-        setIsDarkMode(!isDarkMode);
-    };
-
-    useEffect(() => {
-        document.body.classList.toggle('dark-mode', isDarkMode);
-    }, [isDarkMode]);
-
     return (
-        <header className={`header ${isDarkMode ? 'dark-mode' : ''}`}>
-            <img src="/ast.png" alt="App Logo" className="logo" /> {/* Replace with your logo path */}
-            <h1 className="app-name">Rule Engine App</h1>
-            <button onClick={toggleDarkMode} className="toggle-mode">
-                {isDarkMode ? 'Light Mode' : 'Dark Mode'}
-            </button>
+        <header className="flex items-center justify-between p-2 ">
+            <img src="ast.png" alt="App Logo" className="h-12" />
+            <h1 className="text-lg font-bold text-white">Rule Engine</h1>
         </header>
     );
 };
