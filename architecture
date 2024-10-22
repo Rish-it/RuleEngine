@@ -1,0 +1,25 @@
+Open the file to understand the thought process...
+
+Architectural Diagram:- https://excalidraw.com/#json=Mv5Dv2TBVgQ30KN1W95rX,AjBUkyv-gT0PtaKijBLvcw
+
+
+
+Theory: The Rule Engine with AST project is designed to evaluate user eligibility based on a set of dynamic rules defined by the user. The architecture is modular and consists of multiple components that facilitate rule creation, combination, evaluation, and storage.
+
+Key Components:-
+Frontend (Next.js Application):
+User Interface: Provides a UI for users to create rules, combine them, and evaluate them against input data.
+API Integration: Communicates with the backend via API endpoints for rule management.
+
+Backend (Next.js API Routes):
+Rule Creation API: Accepts rule strings from the frontend, validates them using Zod, and converts them into an Abstract Syntax Tree (AST) before storing them in the database.
+Combine Rules API: Accepts an array of rules, combines their AST representations, and returns the combined AST.
+Evaluate Rules API: Evaluates the combined AST against provided user attributes to determine eligibility.
+
+Database (PostgreSQL with Prisma):
+Stores rules and their corresponding AST representations, ensuring persistence and easy retrieval.
+Provides an interface for the backend to interact with the data using Prisma ORM.
+
+Business Logic:
+AST Generation: Converts rule strings into an AST format, allowing for structured evaluation.
+Rule Evaluation Logic: Implements the logic to evaluate rules based on different operators (e.g., >, <, ==) and handles combined rules.
