@@ -2,6 +2,8 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
+Architectural Diagram:- https://excalidraw.com/#json=Mv5Dv2TBVgQ30KN1W95rX,AjBUkyv-gT0PtaKijBLvcw
+
 First, run the development server:
 
 ```bash
