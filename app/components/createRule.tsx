@@ -1,4 +1,3 @@
-// CreateRule.tsx
 "use client";
 import { useState } from 'react';
 import { LampContainer } from './ui/lamp';
@@ -25,8 +24,8 @@ const CreateRule = () => {
     };
 
     return (
-        <div className="max-w-2xl mx-10 my-8 p-6 bg-gray-900 rounded-lg">
-            <h1 className="text-2xl font-bold text-white mb-4">Create</h1>
+        <div className="max-w-md mx-auto my-8 p-6 bg-gray-900 rounded-lg shadow-lg">
+            <h1 className="text-2xl font-bold text-white mb-4">Create Rule</h1>
             <form onSubmit={handleSubmit} className="space-y-4">
                 <input
                     type="text"
@@ -34,11 +33,11 @@ const CreateRule = () => {
                     onChange={(e) => setRuleString(e.target.value)}
                     placeholder="Enter rule string"
                     required
-                    className="w-full p-2 border border-gray-600 rounded-lg bg-gray-900 text-white placeholder-gray-400 focus:border-blue-500 focus:outline-none"
+                    className="w-full p-2 border border-gray-600 rounded-lg bg-gray-800 text-white placeholder-gray-400 focus:border-blue-500 focus:outline-none"
                 />
                 <button 
                     type="submit" 
-                    className="w-1/4 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition duration-200"
+                    className="w-full py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition duration-200"
                 >
                     Create Rule
                 </button>
